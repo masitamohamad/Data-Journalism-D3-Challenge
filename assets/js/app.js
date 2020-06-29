@@ -1,12 +1,12 @@
 // Step 1: Set up chart canvas
 // ==============================================================================
-var svgWidth = 900;
-var svgHeight = 600;
+var svgWidth = 850;
+var svgHeight = 450;
 
 var margin = {
     top: 50,
     right: 50,
-    bottom: 50,
+    bottom: 100,
     left: 50
   };
 
@@ -96,11 +96,12 @@ var leftAxis = d3.axisLeft(yLinearScale);
     .append("circle")
     .attr("cx", d => xLinearScale(d.poverty))
     .attr("cy", d => yLinearScale(d.healthcare))
-    .attr("r", "15")
+    .attr("r", "12")
     .attr("opacity", ".5")
 
     // Use CSS style:
     .attr("class", "stateCircle");
+    // or .classed("stateCircle", true)
 
   // Append text to circles
   var circlesGroup = chartGroup.selectAll()
@@ -109,10 +110,14 @@ var leftAxis = d3.axisLeft(yLinearScale);
     .append("text")
     .attr("x", d => xLinearScale(d.poverty))
     .attr("y", d => yLinearScale(d.healthcare))
+    .attr("font-size", "10px")
     .text(d => (d.abbr))
 
     // use CSS style:
-    .attr("class", "stateText");
+    .attr("class", "stateText")
+
+    // additional offset to make texts centered/aligned to circles:
+    .attr("dy", 4);
 
 // Step 7: Initialize tool tip
 // ==============================================================================
