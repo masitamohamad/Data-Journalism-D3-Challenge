@@ -47,7 +47,7 @@ var chartGroup = svg.append("g")
     state: "Alabama"
  */
 
-d3.csv("assets/data/data.csv").then(function(censusData) {
+d3.csv("bonus/assets/data/data.csv").then(function(censusData) {
     censusData.forEach(function(data) {
       data.poverty = +data.poverty;
       data.healthcare = +data.healthcare;
