@@ -1,5 +1,8 @@
 # D3 Challenge - Data Journalism and D3
 
+### Results: 
+Deployed website can be found [here](https://masitamohamad.github.io/Data-Journalism-D3-Challenge/)
+
 ![Newsroom](https://media.giphy.com/media/v2xIous7mnEYg/giphy.gif)
 
 ## Background
